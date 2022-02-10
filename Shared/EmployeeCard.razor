@@ -1,0 +1,46 @@
+﻿
+<style>
+.card-img-top {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+</style>
+
+<div  class="card m-2">
+  <div class="card-body">
+    <h6 class="card-title text-center">Digital Marketing</h6>
+    <h6 class="card-subtitle mb-2 text-muted text-center">Sales sector</h6>
+    <div class="card-text text-center">
+         <img class="card-img-top" src="@Image" alt="Card image cap">
+        <p></p>
+        <h5>@Name</h5>
+    </div>
+    <div>
+       
+                <h6 class="card-text"><b>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>  &nbsp;: <small>@ID</small></h6>                 
+                <h6 class="card-text"><b>Joined&nbsp;</b> &nbsp;: &nbsp;<small>@Joined</small> </h6>
+               
+                <h6 class="card-text"><b>Email&nbsp;&nbsp;&nbsp;</b>  &nbsp;: &nbsp;<small>@Email</small></h6>
+    </div>
+         
+  </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = "";
+
+    [Parameter]
+    public string Image { get; set; } = "";
+
+    [Parameter]
+    public int ID { get; set; }
+
+   [Parameter]
+    public string Joined { get; set; } = "";
+
+    [Parameter]
+    public string Email { get; set; } = "";
+      
+}

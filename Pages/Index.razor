@@ -1,0 +1,31 @@
+﻿@page "/"
+
+@using BlazorApp.Data
+@inject EmployeeService EmployeeService
+
+@if (employeeDetails == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="container">
+    <div class="row">       
+   @foreach (var employee in employeeDetails)
+   {
+      <div class="col-lg-4 mb-2">
+      <EmployeeCard Name=@employee.Name Image=@employee.Image ID=@employee.ID Joined=@employee.Joined.ToShortDateString() Email=@employee.Email></EmployeeCard>
+     </div>
+   }  
+   </div>
+   </div>
+}
+
+@code {
+    private EmployeeModel[]? employeeDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        employeeDetails = await EmployeeService.GetEmployeeAsync(DateTime.Now);
+    }
+}

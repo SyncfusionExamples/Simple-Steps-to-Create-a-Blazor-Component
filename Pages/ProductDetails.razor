@@ -1,0 +1,30 @@
+﻿@page "/Product"
+
+<div class="card bg-gradient-info " style="width: 18rem;">
+  <div class="card-body">
+    <h6 class="card-title text-center">Digitial Marketing</h6>
+    <h6 class="card-subtitle mb-2 text-muted text-center">Sales sector</h6>
+    <div class="card-text text-center">
+         <img class="card-img-top" src="@imageUrl" alt="Card image cap">
+        <p></p>
+        <h4>Margaret</h4>
+    </div>
+    <div>
+       <br />
+                <h6 class="card-text"><b>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>  &nbsp;: <small>124</small></h6>                 
+                <h6 class="card-text"><b>Joined&nbsp;</b> &nbsp;: &nbsp;<small>12th July 2012</small> </h6>
+               
+                <h6 class="card-text"><b>Email&nbsp;&nbsp;&nbsp;</b>  &nbsp;: &nbsp;<small>margaret@domain.com</small></h6>
+    </div>
+         
+  </div>
+</div>
+
+@code {
+    private string imageUrl = 
+        "../EmployeeImage.png";
+    private string productName = 
+        "Awesome Product";
+    private string productDescription = 
+        "You won't believe how great this product is until you actually use it yourself.";
+}
